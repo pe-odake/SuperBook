@@ -7,8 +7,11 @@ def hello_heroes(request):
     return HttpResponse("Bem-vindo ao módulo Heroes!")
 
 def lista_herois(request):
-    herois = Hero.objects.all()  # busca todos os heróis do banco
+    herois = Hero.objects.all()  
     return render(request, "heroes/lista_herois.html", {"herois": herois})
+
+def home(request):
+    return render(request, 'base.html')
 
 class HeroListView(ListView):
     model = Hero
