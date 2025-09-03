@@ -10,6 +10,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ post.autor }}</h5>
             <p class="card-text">{{ post.mensagem }}</p>
+            <p class="card-text">{{ post.criado_em | date:"d/m/Y" }}</p>
         </div>
         <div class="card-body">
             <a href="#" class="card-link">Curtir</a>
